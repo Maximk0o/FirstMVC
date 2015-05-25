@@ -1,0 +1,22 @@
+﻿@using System.Web.Optimization
+<!doctype html>
+<html>
+<head>
+    <title>Test</title>
+    @Styles.Render("/Content/Style.css")
+    @Scripts.Render("/Scripts/jquery-2.1.4.min.js")
+    @Scripts.Render("/Scripts/actions.js")
+
+</head>
+<body>
+<div id="header">
+    @Html.ActionLink("Antida software", "Index", "Home", new{}, new { id = "label" })
+    @Html.ActionLink("Client", "Index", "Client", new { }, new { Class = "header_button" })
+    @Html.ActionLink("Worker", "Index", "Home", new { }, new { Class = "header_button" })
+    @Html.ActionLink("Login", "Index", "Home", new { }, new { Class = "header_button", Id = "login" })
+</div>
+<div id="mainbox">
+    @RenderBody()
+</div>
+</body>
+</html>

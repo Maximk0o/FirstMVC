@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="taskbox">
+    @foreach (var task in Model) { 
+    <div class="title" id="@task.id">@task.title</div>
+    <div class="content">@task.text.Trim()</div>
+    }
+</div>
